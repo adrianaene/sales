@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <script data-require="angular.js@1.2.7" data-semver="1.2.7" src="http://code.angularjs.org/1.2.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" />         
+  </head>
+  <body>
+    
+    <div ng-controller="myAppCtrl">
+      <table class="table">
+        <thead>
+          <tr class="table-header">
+            <th>Publicatie</th>
+            <th>Categorie</th>
+            <th><img src="paper.png" class="paper-icon"></th>
+            <th><img src="book.png" class="book-icon"></th>
+            <th><img src="cd.png" class="cd-icon"></th>
+          </tr>
+        </thead>
+        <tbody class="table-boby" >
+          <tr ng-repeat="paper in papers" ng-click="rowClicked($index)">
+            <td>{{paper.name}}</td>
+            <td>{{paper.category}}</td>
+            <td><img src="check.png" class="check-icon"></td>
+            <td><img src="delete.png" class="delete-icon" ng-click="bookCliked($index)" id="{{ 'bookID' + $index }}"></td>
+            <td><img src="delete.png" class="delete-icon"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+
+</html>
+
+

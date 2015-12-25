@@ -1,0 +1,30 @@
+thead {
+	color: #000033;	
+}
+
+.table-header {
+	background-color: #ffffcc;
+}
+
+tbody {
+	color: #ffffcc;
+}
+
+.table-boby {
+	background-color: #000033;
+}
+
+tbody tr:hover{
+	opacity: 0.5;
+	background-color: #666699;
+}
+
+.book-icon,
+.paper-icon,
+.cd-icon,
+.check-icon,
+.delete-icon {
+	width: 20px;
+	height: 20px;
+}
+
