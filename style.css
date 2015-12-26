@@ -15,14 +15,14 @@ tbody {
 }
 
 tbody tr:hover{
-	opacity: 0.5;
+	opacity: 0.8;
 	background-color: #666699;
 }
 
 .book-icon,
 .paper-icon,
 .cd-icon,
-.check-icon,
+.sell-icon,
 .delete-icon {
 	width: 20px;
 	height: 20px;
