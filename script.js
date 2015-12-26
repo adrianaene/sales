@@ -88,18 +88,6 @@ myApp.controller('myAppCtrl', function ($scope) {
 
    $scope.cancelSellPushed = function() {
     $scope.showSell = false;
-    for(var i = 0; i < $scope.totalPapers.length; i++){
-      $('#rowID' + $scope.totalPapers[i]).css('background-color', '#000033');
-    }
-    for(var i = 0; i < $scope.totalBooks.length; i++){
-     $('#bookID' + $scope.totalBooks[i]).attr('src', 'delete.png');
-    }
-    for(var i = 0; i < $scope.totalCDs.length; i++){
-     $('#cdID' + $scope.totalCDs[i]).attr('src', 'delete.png');
-    }
-      $scope.totalBooks = [];
-      $scope.totalCDs = [];
-      $scope.totalPapers = [];
    };
 
    $scope.sellPushed = function() {
