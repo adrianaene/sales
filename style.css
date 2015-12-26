@@ -27,8 +27,67 @@ tbody tr:hover{
 .paper-icon,
 .cd-icon,
 .sell-icon,
-.delete-icon {
+.delete-icon,
+.hide-icon {
 	width: 20px;
 	height: 20px;
 }
+
+#sellWindow {
+	color: #000033;
+	background-color: #ffffcc;
+	z-index: : 1;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border: 2px solid #000033;
+	text-align: center;
+	box-shadow: 10px 10px 15px 3px #ccccff;	
+	font-size: 13px;
+	padding: 50px;
+}
+
+.myButton {
+	-moz-box-shadow: 0px 0px 0px 2px #663891;
+	-webkit-box-shadow: 0px 0px 0px 2px #663891;
+	box-shadow: 0px 0px 0px 2px #663891;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b99bd1), color-stop(1, #612dcf));
+	background:-moz-linear-gradient(top, #b99bd1 5%, #612dcf 100%);
+	background:-webkit-linear-gradient(top, #b99bd1 5%, #612dcf 100%);
+	background:-o-linear-gradient(top, #b99bd1 5%, #612dcf 100%);
+	background:-ms-linear-gradient(top, #b99bd1 5%, #612dcf 100%);
+	background:linear-gradient(to bottom, #b99bd1 5%, #612dcf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b99bd1', endColorstr='#612dcf',GradientType=0);
+	background-color:#b99bd1;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:3px;
+	border:1px solid #6b3dbf;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffcc;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:4px 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #553ead;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #612dcf), color-stop(1, #b99bd1));
+	background:-moz-linear-gradient(top, #612dcf 5%, #b99bd1 100%);
+	background:-webkit-linear-gradient(top, #612dcf 5%, #b99bd1 100%);
+	background:-o-linear-gradient(top, #612dcf 5%, #b99bd1 100%);
+	background:-ms-linear-gradient(top, #612dcf 5%, #b99bd1 100%);
+	background:linear-gradient(to bottom, #612dcf 5%, #b99bd1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#612dcf', endColorstr='#b99bd1',GradientType=0);
+	background-color:#612dcf;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
 

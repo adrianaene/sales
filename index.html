@@ -33,6 +33,13 @@
           </tr>
         </tbody>
       </table>
+
+      <div id="sellWindow" ng-show="showSell">
+        <p class="sell-details" ng-repeat="detail in sellDetails track by $index">{{detail}}</p>        
+        <a href="#" class="myButton" ng-click="sellPushed()">Sell</a>
+        <a href="#" class="myButton" ng-click="cancelSellPushed()">Cancell Sell</a>        
+      </div>
+
     </div>
   </body>
 
