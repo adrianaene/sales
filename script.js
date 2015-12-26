@@ -4,6 +4,7 @@ myApp.controller('myAppCtrl', function ($scope) {
 
   $scope.totalPapers = [];
   $scope.totalBooks = [];
+  $scope.totalCDs = [];
 
   $scope.papers = [{ name : 'Click', category : 'Tabloide', price : 1, book : 3, cd : 10},
     { name : 'Practic in bucatarie', category : 'Culinar', price : 2, book : 7, cd : 15},
@@ -53,6 +54,15 @@ myApp.controller('myAppCtrl', function ($scope) {
     }
     else
       $('#bookID' + index).attr('src', 'delete.png');
+  };
+
+  $scope.cdClicked = function(index){
+    if($('#cdID' + index).attr('src') === 'delete.png') {   
+      $('#cdID' + index).attr('src', 'check.png');
+      $scope.totalCDs.push(index);
+    }
+    else
+      $('#cdID' + index).attr('src', 'delete.png');
   };
 
    $scope.sellClicked = function(index){

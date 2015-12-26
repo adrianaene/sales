@@ -29,7 +29,7 @@
             <td>{{paper.category}}</td>
             <td><img src="sell.png" class="sell-icon" ng-click="sellClicked($index)"></td>
             <td><img src="delete.png" class="delete-icon" ng-click="bookCliked($index)" id="{{ 'bookID' + $index }}"></td>
-            <td><img src="delete.png" class="delete-icon"></td>
+            <td><img src="delete.png" class="delete-icon" ng-click="cdClicked($index)" id="{{ 'cdID' + $index }}"></td>
           </tr>
         </tbody>
       </table>
