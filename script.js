@@ -138,6 +138,7 @@ myApp.controller('myAppCtrl', function ($scope) {
       for(var i = 0; i < $scope.searchedPapers.length; i++){
        $('#paperID' + i).attr('src', 'delete.png');
        $('#bookID' + i).attr('src', 'delete.png');
+       $('#cdID' + i).attr('src', 'delete.png');
        $('#rowID' + i).css('background-color', '#000033');
       }           
       $scope.totalBooks = [];
