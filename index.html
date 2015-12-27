@@ -16,7 +16,10 @@
       <table class="table">
         <thead>
           <tr class="table-header">
-            <th>Publicatie</th>
+            <th>Publicatie                  
+            <input ng-model="inputValue" type="text" placeholder="Cauta ziare..." ng-change="filter(inputValue)">
+            <img src="sell.png" class="sell-icon" ng-click="sellClicked()">
+          </th>
             <th>Categorie</th>
             <th><img src="paper.png" class="paper-icon"></th>
             <th><img src="book.png" class="book-icon"></th>
@@ -24,10 +27,10 @@
           </tr>
         </thead>
         <tbody class="table-boby" >
-          <tr ng-repeat="paper in papers" ng-click="rowClicked($index)" id="{{ 'rowID' + $index }}">
+          <tr ng-repeat="paper in searchedPapers" ng-click="rowClicked($index)" id="{{ 'rowID' + $index }}">
             <td>{{paper.name}}</td>
             <td>{{paper.category}}</td>
-            <td><img src="sell.png" class="sell-icon" ng-click="sellClicked($index)"></td>
+            <td><img src="delete.png" class="delete-icon" ng-click="paperClicked($index)" id="{{ 'paperID' + $index }}"></td>
             <td><img src="delete.png" class="delete-icon" ng-click="bookCliked($index)" id="{{ 'bookID' + $index }}"></td>
             <td><img src="delete.png" class="delete-icon" ng-click="cdClicked($index)" id="{{ 'cdID' + $index }}"></td>
           </tr>
@@ -37,7 +40,7 @@
       <div id="sellWindow" ng-show="showSell">
         <p class="sell-details" ng-repeat="detail in sellDetails track by $index">{{detail}}</p>        
         <a href="#" class="myButton" ng-click="sellPushed()">Sell</a>
-        <a href="#" class="myButton" ng-click="cancelSellPushed()">Cancell Sell</a>        
+        <a href="#" class="myButton" ng-click="cancelSellPushed()">Cancel Sell</a>        
       </div>
 
     </div>
