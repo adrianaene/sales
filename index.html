@@ -31,14 +31,14 @@
             <td>{{paper.name}}</td>
             <td>{{paper.category}}</td>
             <td><img src="delete.png" class="delete-icon" ng-click="paperClicked($index)" id="{{ 'paperID' + $index }}"></td>
-            <td><img src="delete.png" class="delete-icon" ng-click="bookCliked($index)" id="{{ 'bookID' + $index }}"></td>
-            <td><img src="delete.png" class="delete-icon" ng-click="cdClicked($index)" id="{{ 'cdID' + $index }}"></td>
+            <td><img src="delete.png" class="delete-icon" ng-click="bookCliked($index)" id="{{ 'bookID' + $index }}"ng-show="paper.hasBook"></td>
+            <td><img src="delete.png" class="delete-icon" ng-click="cdClicked($index)" id="{{ 'cdID' + $index }}" ng-show="paper.hasCD"></td>
           </tr>
         </tbody>
       </table>
 
       <div id="sellWindow" ng-show="showSell">
-        <p class="sell-details" ng-repeat="detail in sellDetails track by $index">{{detail}}</p>        
+        <p class="sell-details" ng-repeat="detail in sellDetails track by $index">{{detail}}</p>        ng-show="paper.hasBook"
         <a href="#" class="myButton" ng-click="sellPushed()">Sell</a>
         <a href="#" class="myButton" ng-click="cancelSellPushed()">Cancel Sell</a>        
       </div>
