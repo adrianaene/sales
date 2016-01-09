@@ -16,6 +16,8 @@ myApp.controller('myAppCtrl', function ($scope) {
     { name : 'Libertatea pentru femei', category : 'Femei', price : 1, book : 24, cd : 10, hasCD : true, hasBook : false},
     { name : 'Click pofta buna!', category : 'Culinar', price : 2, book : 5, cd : 10, hasCD : false, hasBook : false},
     { name : 'TVMania', category : 'Ghid TV', price : 3, book : 23, cd : 12, hasCD : false, hasBook : true},
+    { name : 'Click GhidTV', category : 'Ghid TV', price : 3, book : 23, cd : 12, hasCD : false, hasBook : false},
+    { name : 'Libertatea GhidTV', category : 'Ghid TV', price : 3, book : 23, cd : 12, hasCD : true, hasBook : true},
     { name : 'Click! pentru femei', category : 'Femei', price : 1, book : 22, cd : 10, hasCD : false, hasBook : true},
     { name : 'Libertatea - Editia de duminica', category : 'Publicatie de weekend', price : 1, book : 21, cd : 10, hasCD : true, hasBook : false},
     { name : 'Femeia de azi', category : 'Femei', price : 2, book : 20, cd : 10, hasCD : true, hasBook : false},
@@ -26,8 +28,10 @@ myApp.controller('myAppCtrl', function ($scope) {
     { name : 'Gazeta Sporturilor', category : 'Sport', price : 3, book : 15, cd : 10, hasCD : false, hasBook : true},
     { name : 'Ziarul Lumina', category : 'Religie', price : 1, book : 14, cd : 10, hasCD : false, hasBook : true},
     { name : 'Lumina de duminica', category : 'Religie', price : 1, book : 13, cd : 10, hasCD : true, hasBook : false},
+    { name : 'Crestinul de azi', category : 'Religie', price : 1, book : 13, cd : 10, hasCD : true, hasBook : true},
+    { name : 'Crestinul de duminica', category : 'Religie', price : 1, book : 13, cd : 10, hasCD : false, hasBook : false},
     { name : 'Practic Carticica Practica', category : 'Culinar', price : 1, book : 12, cd : 10, hasCD : true, hasBook : true},
-    { name : 'OK! Romania', category : 'Celebritati', price : 10, book : 11, cd : 10, hasCD : false, hasBook : false},
+    { name : 'OK! Romania', category : 'Vedete', price : 10, book : 11, cd : 10, hasCD : false, hasBook : false},
     { name : 'Ciao!', category : 'Vedete', price : 12, book : 10, cd : 10, hasCD : true, hasBook : false},
     { name : 'Weekend Adevarul', category : 'Publicatie de weekend', price : 1, book : 9, cd : 10, hasCD : true, hasBook : false},
     { name : 'Jurnal Aradean', category : 'Cotidian generalist, local sau regional', price : 1, book : 8, cd : 10, hasCD : true, hasBook : true},
@@ -37,13 +41,16 @@ myApp.controller('myAppCtrl', function ($scope) {
     { name : 'Ioana', category : 'Femei', price : 1, book : 4, cd : 10, hasCD : true, hasBook : true},
     { name : 'Historia', category : 'Cultura', price : 7, book : 4, cd : 10, hasCD : true, hasBook : true},
     { name : 'Evenimentul Zilei', category : 'Cotidian generalist national', price : 2, book : 14, cd : 12, hasCD : true, hasBook : false},
-    { name : 'Viva', category : 'Celebritati', price : 1, book : 4, cd : 13, hasCD : false, hasBook : false},
+    { name : 'Viva', category : 'Vedete', price : 1, book : 4, cd : 13, hasCD : false, hasBook : false},
     { name : 'Weekend Magazin', category : 'Divertisment, Integrame, Rebus si Jocuri', price : 3, book : 24, cd : 14, hasCD : false, hasBook : false},
     { name : 'Avantaje', category : 'Femei (Glossy)', price : 1, book : 30, cd : 15, hasCD : true, hasBook : false},
     { name : 'Romania Libera', category : 'Cotidian generalist national', price : 5, book : 13, cd : 16, hasCD : true, hasBook : false},
     { name : 'Spy', category : 'Vedete', price : 10, book : 12, cd : 17, hasCD : true, hasBook : true},
     { name : 'Bihari Naplo', category : 'Cotidian generalist, local sau regional', price : 1, book : 4, cd : 18, hasCD : false, hasBook : true},
-    { name : 'Unica', category : 'Femei (Glossy)', price : 11, book : 16, cd : 109, hasCD : false, hasBook : true}];
+    { name : 'Unica', category : 'Femei (Glossy)', price : 11, book : 16, cd : 109, hasCD : false, hasBook : true}, 
+    { name : 'Jurnalul National', category : 'Tabloide', price : 11, book : 16, cd : 109, hasCD : false, hasBook : true},
+    { name : 'Evenimentul Zilei', category : 'Tabloide', price : 11, book : 16, cd : 109, hasCD : false, hasBook : true},
+    { name : 'Adevarul', category : 'Tabloide', price : 11, book : 16, cd : 109, hasCD : false, hasBook : true}];
 
   $scope.searchedPapers = $scope.papers.slice();
 
@@ -154,5 +161,13 @@ myApp.controller('myAppCtrl', function ($scope) {
       return name.indexOf(input) != -1 || category.indexOf(input) != -1;
     });
   };
+
+  $scope.getPapersBy = function(text){
+    $scope.searchedPapers = $scope.papers.filter(function(x){
+      var category = x.category.toLowerCase();
+      var input = text.toLowerCase();
+      return category.indexOf(input) != -1;
+    });    
+  }
 
 });

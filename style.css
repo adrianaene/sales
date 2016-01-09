@@ -90,5 +90,10 @@ tbody tr:hover{
 	top:1px;
 }
 
+.dropdown-menu {
+	position: absolute;
+	left: 120px;	
+}
+
 
 

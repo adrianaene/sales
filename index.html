@@ -17,10 +17,30 @@
         <thead>
           <tr class="table-header">
             <th>Publicatie                  
-            <input ng-model="inputValue" type="text" placeholder="Cauta ziare..." ng-change="filter(inputValue)">
-            <img src="sell.png" class="sell-icon" ng-click="sellClicked()">
-          </th>
-            <th>Categorie</th>
+              <input ng-model="inputValue" type="text" placeholder="Cauta ziare..." ng-change="filter(inputValue)">
+              <img src="sell.png" class="sell-icon" ng-click="sellClicked()">
+            </th>
+            <th>
+              <div class="dropdown">
+                Categorie
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Cauta categorie
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#" ng-click="getPapersBy('')">Toate categoriile</a></li>
+                  <li><a href="#" ng-click="getPapersBy('tabloid')">Tabloide</a></li>
+                  <li><a href="#" ng-click="getPapersBy('ghid tv')">Ghid TV</a></li>
+                  <li><a href="#" ng-click="getPapersBy('femei')">Femei</a></li>
+                  <li><a href="#" ng-click="getPapersBy('sport')">Sport</a></li>
+                  <li><a href="#" ng-click="getPapersBy('religie')">Religie</a></li>
+                  <li><a href="#" ng-click="getPapersBy('vedete')">Vedete</a></li>
+                  <li><a href="#" ng-click="getPapersBy('culinar')">Culinar</a></li>
+                  <li><a href="#" ng-click="getPapersBy('publicatie de weekend')">Publicatie de weekend</a></li>
+                  <li><a href="#" ng-click="getPapersBy('sanatate')">Sanatate & ingrijire personala</a></li>                 
+                </ul>
+              </div>
+            </th>
             <th><img src="paper.png" class="paper-icon"></th>
             <th><img src="book.png" class="book-icon"></th>
             <th><img src="cd.png" class="cd-icon"></th>
@@ -31,14 +51,14 @@
             <td>{{paper.name}}</td>
             <td>{{paper.category}}</td>
             <td><img src="delete.png" class="delete-icon" ng-click="paperClicked($index)" id="{{ 'paperID' + $index }}"></td>
-            <td><img src="delete.png" class="delete-icon" ng-click="bookCliked($index)" id="{{ 'bookID' + $index }}"ng-show="paper.hasBook"></td>
+            <td><img src="delete.png" class="delete-icon" ng-click="bookCliked($index)" id="{{ 'bookID' + $index }}" ng-show="paper.hasBook"></td>
             <td><img src="delete.png" class="delete-icon" ng-click="cdClicked($index)" id="{{ 'cdID' + $index }}" ng-show="paper.hasCD"></td>
           </tr>
         </tbody>
       </table>
 
       <div id="sellWindow" ng-show="showSell">
-        <p class="sell-details" ng-repeat="detail in sellDetails track by $index">{{detail}}</p>        ng-show="paper.hasBook"
+        <p class="sell-details" ng-repeat="detail in sellDetails track by $index">{{detail}}</p>        
         <a href="#" class="myButton" ng-click="sellPushed()">Sell</a>
         <a href="#" class="myButton" ng-click="cancelSellPushed()">Cancel Sell</a>        
       </div>
