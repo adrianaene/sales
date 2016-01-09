@@ -1,5 +1,6 @@
 table {
 	height: 100vh;
+	font-size: 25px;
 }
 
 thead {
@@ -29,8 +30,8 @@ tbody tr:hover{
 .sell-icon,
 .delete-icon,
 .hide-icon {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 }
 
 #sellWindow {
