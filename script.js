@@ -36,7 +36,7 @@ myApp.controller('myAppCtrl', function ($scope) {
     { name : 'Weekend Adevarul', category : 'Publicatie de weekend', price : 1, book : 9, cd : 10, hasCD : true, hasBook : false},
     { name : 'Jurnal Aradean', category : 'Cotidian generalist', price : 1, book : 8, cd : 10, hasCD : true, hasBook : true},
     { name : 'Practic - Idei pentru casa, gradina si apartament', category : 'Home&Deco', price : 1, book : 7, cd : 10, hasCD : false, hasBook : true},
-    { name : 'Super Bravo Girl', category : 'Reviste pentru adolescenti', price : 2, book : 6, cd : 10, hasCD : true, hasBook : true},
+    { name : 'Super Bravo Girl', category : 'Reviste Adolescenti', price : 2, book : 6, cd : 10, hasCD : true, hasBook : true},
     { name : 'ELLE', category : 'Femei (Lifestyle / moda)', price : 4, book : 5, cd : 10, hasCD : false, hasBook : false},
     { name : 'Ioana', category : 'Femei', price : 1, book : 4, cd : 10, hasCD : true, hasBook : true},
     { name : 'Historia', category : 'Cultura', price : 7, book : 4, cd : 10, hasCD : true, hasBook : true},
