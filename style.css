@@ -10,8 +10,6 @@ thead {
 
 .table-header {
 	background-color: #ffffcc;
-	position: fixed;
-	width: 100vw;
 }
 
 tbody {
