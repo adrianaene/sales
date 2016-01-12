@@ -5,10 +5,13 @@ table {
 
 thead {
 	color: #000033;	
+
 }
 
 .table-header {
 	background-color: #ffffcc;
+	position: fixed;
+	width: 100vw;
 }
 
 tbody {
