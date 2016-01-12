@@ -14,9 +14,21 @@ thead {
 	width: 100vw;
 }
 
+.book-icon{
+	left: 88vw;
+	top: 3vh;
+	position: absolute;
+}
+
+.cd-icon{
+	left: 94vw;
+	top: 3vh;
+	position: absolute;
+}
+
 .paper-icon{
 	left: 83vw;
-	top: 5vh;
+	top: 3vh;
 	position: absolute;
 }
 
