@@ -14,24 +14,6 @@ thead {
 	width: 100vw;
 }
 
-.book-icon{
-	left: 90vw;
-	top: 3vh;
-	position: absolute;
-}
-
-.cd-icon{
-	left: 95vw;
-	top: 3vh;
-	position: absolute;
-}
-
-.paper-icon{
-	left: 84vw;
-	top: 3vh;
-	position: absolute;
-}
-
 tbody {
 	color: #ffffcc;
 }
